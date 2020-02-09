@@ -6,9 +6,12 @@ import java.util.Map;
 public class MostFrequent {
     public MostFrequent(){ }
 
-    public int mostFrequentService(int[] givenArray){
+    public Integer mostFrequentService(int[] givenArray){
         int mostFrequentNumber = 0;
         int tmpMaxValue = 0;
+        if(givenArray.length == 0){
+            return null;
+        }
         HashMap<Integer, Integer> countValueMaps = new HashMap<Integer, Integer>();
         for(int valueIdx=0; valueIdx<givenArray.length; valueIdx++){
             if(null == countValueMaps.get(givenArray[valueIdx])){
