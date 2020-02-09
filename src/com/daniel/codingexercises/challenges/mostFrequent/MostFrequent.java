@@ -1,4 +1,4 @@
-package com.daniel.codingexercises.challenges;
+package com.daniel.codingexercises.challenges.mostFrequent;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,6 +6,11 @@ import java.util.Map;
 public class MostFrequent {
     public MostFrequent(){ }
 
+    /**
+     * Determines the most frequent element in an array
+     * @param givenArray
+     * @return Integer value that is the most frequent element
+     */
     public Integer mostFrequentService(int[] givenArray){
         int mostFrequentNumber = 0;
         int tmpMaxValue = 0;

@@ -1,4 +1,4 @@
-package com.daniel.codingexercises.challenges;
+package com.daniel.codingexercises.challenges.mostFrequent;
 
 
 import org.junit.jupiter.api.Test;

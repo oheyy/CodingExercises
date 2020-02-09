@@ -1,6 +1,6 @@
 package com.daniel.codingexercises;
 
-import com.daniel.codingexercises.challenges.MostFrequent;
+import com.daniel.codingexercises.challenges.mostFrequent.MostFrequent;
 
 public class Main {
 
