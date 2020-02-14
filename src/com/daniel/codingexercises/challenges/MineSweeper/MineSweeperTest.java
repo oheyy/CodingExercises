@@ -2,8 +2,6 @@ package com.daniel.codingexercises.challenges.MineSweeper;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class MineSweeperTest {
     @Test
     public void test_array_is_3_by_4(){
@@ -30,6 +28,25 @@ class MineSweeperTest {
         //  [1, 3, -1, 2, 0],
         //  [0, 1, 2, 2, 1],
         //  [0, 0, 1, -1, 1]]
+    }
+
+    @Test
+    public void test_click(){
+        MineSweeper mineSweeper = new MineSweeper();
+        int[][] field1 = {{0, 0, 0, 0, 0},
+                {0, 1, 1, 1, 0},
+                {0, 1, -1, 1, 0}};
+//        mineSweeper.click(field1, 3,5,2,2);
+        mineSweeper.click(field1, 3,5,1,4);
+
+        int[][] field2 = {{-1, 1, 0, 0},
+                {1, 1, 0, 0},
+                {0, 0, 1, 1},
+                {0, 0, 1, -1}};
+
+        mineSweeper.click(field2,4,4,0,1);
+        mineSweeper.click(field2,4,4,1,3);
+
     }
 
 }

@@ -22,4 +22,17 @@ public class MineSweeper {
         }
         return mineSweeper;
     }
+
+    public int[][] click(int[][] field, int numRows, int numCols, int i, int j){
+        if(field[i][j] == 0){
+            for(int row=0; row<numRows; row++){
+                for(int col=0; col<numCols; col++){
+                    if(field[row][col] == 0){
+                        field[row][col] = -2;
+                    }
+                }
+            }
+        }
+        return field;
+    }
 }
