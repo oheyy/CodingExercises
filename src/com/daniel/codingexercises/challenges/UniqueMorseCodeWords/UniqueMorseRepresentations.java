@@ -7,18 +7,16 @@ public class UniqueMorseRepresentations {
 
     public int uniqueMorseRepresentations(String[] words) {
         String[] morse = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
-        String[] converted = new String[words.length];
-        String res = "";
+        StringBuilder res = new StringBuilder();
         HashMap<String, Integer> countMorseMap = new HashMap<String, Integer>();
         for(int i=0; i<words.length; i++){
             for(int j=0; j<words[i].length(); j++){
-                res += morse[words[i].charAt(j) - 'a'];
+                res.append(morse[words[i].charAt(j) - 'a']);
             }
             if(countMorseMap.get(res) == null){
-                countMorseMap.put(res,1);
+                countMorseMap.put(String.valueOf(res),1);
             }
-            converted[i]=res;
-            res = "";
+            res.setLength(0);
 
         }
 
