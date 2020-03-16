@@ -4,17 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FindAllNumbersDisappeared {
-    public List<Integer> findDisappearedNumbers(int[] input) {
-        List<Integer> disappearedNumbersList = new ArrayList<Integer>();
+    public List<Integer> findDisappearedNumbers(int[] nums) {
+        List<Integer> ret = new ArrayList<Integer>();
 
-        for(int i=1; i<input.length+1; i++){
-            disappearedNumbersList.add(i);
-        }
-        for(final int number: input){
-            if(number > 0 && number < input.length +1){
-                disappearedNumbersList.removeIf(value -> value.equals(number));
+        for(int i = 0; i < nums.length; i++) {
+            int val = Math.abs(nums[i]) - 1;
+            if(nums[val] > 0) {
+                nums[val] = -nums[val];
             }
         }
-        return disappearedNumbersList;
+
+        for(int i = 0; i < nums.length; i++) {
+            if(nums[i] > 0) {
+                ret.add(i+1);
+            }
+        }
+        return ret;
     }
 }
